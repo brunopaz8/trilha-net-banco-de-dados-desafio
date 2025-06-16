@@ -1,91 +1,97 @@
-# DIO - Trilha .NET - Banco de Dados
-www.dio.me
+# 📚 Desafio de Código SQL 🗃️
 
-## Desafio de projeto
-Para este desafio, você precisará usar seus conhecimentos adquiridos no módulo de banco de dados, da trilha .NET da DIO.
+Este repositório contém a resolução de um **desafio de projeto em SQL**, proposto durante um curso da **[Digital Innovation One (DIO)](https://www.dio.me/)**. O objetivo é praticar e consolidar conhecimentos em SQL por meio de consultas, manipulação de dados e resolução de problemas comuns em bancos de dados relacionais.
 
-## Contexto
-Você é responsável pelo banco de dados de um site de filmes, onde são armazenados dados sobre os filmes e seus atores. Sendo assim, foi solicitado para que você realize uma consulta no banco de dados com o objetivo de trazer alguns dados para análises.
+O exercício contribui para o aprimoramento das habilidades em escrita de queries, compreensão de estruturas de tabelas e uso de comandos essenciais como `SELECT`, `JOIN`, `GROUP BY`, entre outros.
 
-## Proposta
-Você precisará realizar 12 consultas ao banco de dados, cada uma retornando um tipo de informação.
-O seu banco de dados está modelado da seguinte maneira:
+---
 
-![Diagrama banco de dados](Imagens/diagrama.png)
+## 🟣 Proposta
 
-As tabelas sao descritas conforme a seguir:
+Você deverá realizar **12 consultas** ao banco de dados, cada uma retornando um tipo específico de informação.
 
-**Filmes**
+A estrutura do banco de dados está representada no seguinte diagrama:
 
-Tabela responsável por armazenar informações dos filmes.
+### 🗂️ Estrutura das Tabelas
 
-**Atores**
+* **Filmes**: Armazena informações sobre os filmes.
+* **Atores**: Armazena informações dos atores.
+* **Gêneros**: Armazena os gêneros dos filmes.
+* **ElencoFilme**: Representa o relacionamento *muitos para muitos* entre filmes e atores (um ator pode participar de vários filmes, e um filme pode ter vários atores).
+* **FilmesGenero**: Representa o relacionamento *muitos para muitos* entre filmes e gêneros (um filme pode ter mais de um gênero, e um gênero pode estar presente em vários filmes).
 
-Tabela responsável por armazenar informações dos atores.
+---
 
-**Generos**
+## 🛠️ Preparando o Banco de Dados
 
-Tabela responsável por armazenar os gêneros dos filmes.
+Execute o arquivo `Script Filmes.sql` no seu SQL Server. O script está disponível na pasta `Scripts` deste repositório ([clique aqui](Script%20Filmes.sql)). Ele irá:
 
-**ElencoFilme**
+* Criar o banco de dados `Filmes`;
+* Criar todas as tabelas mencionadas;
+* Inserir os dados necessários para realizar o desafio.
 
-Tabela responsável por representar um relacionamento do tipo muitos para muitos entre filmes e atores, ou seja, um ator pode trabalhar em muitos filmes, e filmes
-podem ter muitos atores.
+---
 
-**FilmesGenero**
+## 🎯 Objetivo
 
-Tabela responsável por representar um relacionamento do tipo muitos para muitos entre filmes e gêneros, ou seja, um filme pode ter mais de um gênero, e um genêro pode fazer parte de muitos filmes.
+Você deverá escrever consultas SQL que retornem os seguintes resultados. Abaixo de cada item, há uma imagem com o **retorno esperado** — sua saída deve corresponder ao exemplo.
 
-## Preparando o banco de dados
-Você deverá executar o arquivo **Script Filmes.sql** em seu banco de dados SQL Server, presente na pasta Scripts deste repositório ([ou clique aqui](Script%20Filmes.sql)). Esse script irá criar um banco chamado **Filmes**, contendo as tabelas e os dados necessários para você realizar este desafio.
+---
 
-## Objetivo
-Você deverá criar diversas consultas, com o objetivo de retornar os dados a seguir. Abaixo de cada pedido tem o retorno esperado. O seu retorno deve ser igual ao da imagem.
+###
 
-## 1 - Buscar o nome e ano dos filmes
+
+## 1️⃣ - Buscar o nome e ano dos filmes
 
 ![Exercicio 1](Imagens/1.png)
 
-## 2 - Buscar o nome e ano dos filmes, ordenados por ordem crescente pelo ano
+## 2️⃣ - Buscar o nome e ano dos filmes, ordenados por ordem crescente pelo ano
 
 ![Exercicio 2](Imagens/2.png)
 
-## 3 - Buscar pelo filme de volta para o futuro, trazendo o nome, ano e a duração
+## 3️⃣ - Buscar pelo filme de volta para o futuro, trazendo o nome, ano e a duração
 
 ![Exercicio 3](Imagens/3.png)
 
-## 4 - Buscar os filmes lançados em 1997
+## 4️⃣ - Buscar os filmes lançados em 1997
 
 ![Exercicio 4](Imagens/4.png)
 
-## 5 - Buscar os filmes lançados APÓS o ano 2000
+## 5️⃣ - Buscar os filmes lançados APÓS o ano 2000
 
 ![Exercicio 5](Imagens/5.png)
 
-## 6 - Buscar os filmes com a duracao maior que 100 e menor que 150, ordenando pela duracao em ordem crescente
+## 6️⃣ - Buscar os filmes com a duracao maior que 100 e menor que 150, ordenando pela duracao em ordem crescente
 
 ![Exercicio 6](Imagens/6.png)
 
-## 7 - Buscar a quantidade de filmes lançadas no ano, agrupando por ano, ordenando pela duracao em ordem decrescente
+## 7️⃣ - Buscar a quantidade de filmes lançadas no ano, agrupando por ano, ordenando pela duracao em ordem decrescente
 
 ![Exercicio 7](Imagens/7.png)
 
-## 8 - Buscar os Atores do gênero masculino, retornando o PrimeiroNome, UltimoNome
+## 8️⃣ - Buscar os Atores do gênero masculino, retornando o PrimeiroNome, UltimoNome
 
 ![Exercicio 8](Imagens/8.png)
 
-## 9 - Buscar os Atores do gênero feminino, retornando o PrimeiroNome, UltimoNome, e ordenando pelo PrimeiroNome
+## 9️⃣ - Buscar os Atores do gênero feminino, retornando o PrimeiroNome, UltimoNome, e ordenando pelo PrimeiroNome
 
 ![Exercicio 9](Imagens/9.png)
 
-## 10 - Buscar o nome do filme e o gênero
+## 🔟 - Buscar o nome do filme e o gênero
 
 ![Exercicio 10](Imagens/10.png)
 
-## 11 - Buscar o nome do filme e o gênero do tipo "Mistério"
+## 1️⃣1️⃣ - Buscar o nome do filme e o gênero do tipo "Mistério"
 
 ![Exercicio 11](Imagens/11.png)
 
-## 12 - Buscar o nome do filme e os atores, trazendo o PrimeiroNome, UltimoNome e seu Papel
+## 1️⃣2️⃣ - Buscar o nome do filme e os atores, trazendo o PrimeiroNome, UltimoNome e seu Papel
 
 ![Exercicio 12](Imagens/12.png)
+
+## 📂 Resolução
+
+A resolução completa do desafio, com os scripts SQL utilizados para cada consulta, está disponível na pasta [`Resolução`](Resolução/) deste repositório.
+
+
+
